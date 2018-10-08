@@ -18,7 +18,7 @@ do
    echo "##############################################"
 
    # create the table
-   hive -e "create table if not exists sa_house_sales.${filename}(city String, suburb String, numSales Int, avePrice decimal(10,3))
+   hive -e "create table if not exists sa_house_sales.${filename}(city String, suburb String, numSales Int, avePrice Int)
    ROW FORMAT DELIMITED
    FIELDS TERMINATED BY ','
    STORED AS TEXTFILE;"
