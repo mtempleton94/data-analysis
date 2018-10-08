@@ -7,7 +7,7 @@ This data set consists of quarterly median house sale prices for each suburb in 
 Data is taken from https://data.sa.gov.au/data/dataset/metro-median-house-sales and parsed to convert it to a format suitable for Hive data types. 
 ### Add data to HDFS
 [TODO]
-## Create hive tables
+### Create hive tables
 The script data-analysis/sa-house-sales/scripts/create-median-sales-table.sh will apply an appropriate schema to each file in the 
 /user/sa_house_sales/ HDFS directory. 
 ```
@@ -15,3 +15,9 @@ The script data-analysis/sa-house-sales/scripts/create-median-sales-table.sh wil
 ```
 ### Example Hive table output
 [TODO]
+### Impala Queries
+Scripts to run basic queries on the data with Impala are included at /data-analysis/sa-house-sales/impala-queries
+To run a query
+```
+impala-shell -i localhost -f impala-query-history-above-million.sql
+```
